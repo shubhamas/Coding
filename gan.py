@@ -59,3 +59,5 @@ writer_real = SummaryWriter(f"runs/GAN_MNIST/real")
 
 step = 0
 
+hii 
+
