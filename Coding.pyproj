@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b3831786-4305-4a5f-b786-f925ff70b31e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>cnn.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cnn.py" />
+    <Compile Include="ml\a2.py" />
+    <Compile Include="ml\image.py" />
+    <Compile Include="ml\q2\a2.py" />
+    <Compile Include="ml\Que_4_A1.py" />
+    <Compile Include="python\a.py" />
+    <Compile Include="python\audio.py" />
+    <Compile Include="python\classes.py" />
+    <Compile Include="python\dsa.py" />
+    <Compile Include="python\hello.py" />
+    <Compile Include="python\inverse.py" />
+    <Compile Include="python\K_N_classifier.py" />
+    <Compile Include="python\list.py" />
+    <Compile Include="python\Machine_learning.py" />
+    <Compile Include="python\new.py" />
+    <Compile Include="pytorch\cnn.py" />
+    <Compile Include="pytorch\DCGAN\q2_model.py" />
+    <Compile Include="pytorch\DCGAN\train.py" />
+    <Compile Include="pytorch\Index.py" />
+    <Compile Include="pytorch\nn.py" />
+    <Compile Include="pytorch\t1.py" />
+    <Compile Include="pytorch\tensor1.py" />
+    <Compile Include="pytorch\tensor_math.py" />
+    <Compile Include="tensorflow\cnn.py" />
+    <Compile Include="tensorflow\reg_dropout.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ml\a.txt" />
+    <Content Include="ml\data\test\subject01.sad.gif" />
+    <Content Include="ml\data\test\subject03.happy.gif" />
+    <Content Include="ml\data\test\subject05.happy.gif" />
+    <Content Include="ml\data\test\subject08.happy.gif" />
+    <Content Include="ml\data\test\subject08.sad.gif" />
+    <Content Include="ml\data\test\subject11.happy.gif" />
+    <Content Include="ml\data\test\subject14.happy.gif" />
+    <Content Include="ml\data\test\subject14.sad.gif" />
+    <Content Include="ml\data\test\subject15.happy.gif" />
+    <Content Include="ml\data\test\subject15.sad.gif" />
+    <Content Include="ml\data\train\subject01.happy.gif" />
+    <Content Include="ml\data\train\subject02.happy.gif" />
+    <Content Include="ml\data\train\subject02.sad.gif" />
+    <Content Include="ml\data\train\subject03.sad.gif" />
+    <Content Include="ml\data\train\subject04.happy.gif" />
+    <Content Include="ml\data\train\subject04.sad.gif" />
+    <Content Include="ml\data\train\subject05.sad.gif" />
+    <Content Include="ml\data\train\subject06.happy.gif" />
+    <Content Include="ml\data\train\subject06.sad.gif" />
+    <Content Include="ml\data\train\subject07.happy.gif" />
+    <Content Include="ml\data\train\subject07.sad.gif" />
+    <Content Include="ml\data\train\subject09.happy.gif" />
+    <Content Include="ml\data\train\subject09.sad.gif" />
+    <Content Include="ml\data\train\subject10.happy.gif" />
+    <Content Include="ml\data\train\subject10.sad.gif" />
+    <Content Include="ml\data\train\subject11.sad.gif" />
+    <Content Include="ml\data\train\subject12.happy.gif" />
+    <Content Include="ml\data\train\subject12.sad.gif" />
+    <Content Include="ml\data\train\subject13.happy.gif" />
+    <Content Include="ml\data\train\subject13.sad.gif" />
+    <Content Include="ml\image.jpg" />
+    <Content Include="ml\photo.jpg" />
+    <Content Include="pytorch\subject01.happy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ml" />
+    <Folder Include="ml\data\" />
+    <Folder Include="ml\data\test" />
+    <Folder Include="ml\data\train" />
+    <Folder Include="ml\q2" />
+    <Folder Include="python" />
+    <Folder Include="pytorch" />
+    <Folder Include="pytorch\DCGAN" />
+    <Folder Include="tensorflow" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
