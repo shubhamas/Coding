@@ -56,7 +56,7 @@ lr = 3e-4
 z_dim = 2
 image_dim = 2
 batch_size = 8
-num_epochs = 50
+num_epochs = 10
 
 data = torch.from_numpy(data)
 print(data.shape)
@@ -75,23 +75,23 @@ criterion = nn.BCELoss()
 #writer_real = SummaryWriter(f"runs/GAN_MNIST/real")
 
 step = 0
-
+lst = []
 for epoch in range(num_epochs):
     for batch_idx, (real) in enumerate(data):
-        print(real.shape)
-        print(type(real))
+        #print(real.shape)
+        #print(type(real))
         real = real.view(-1, 2).to(device)
-        batch_size = 8
-        print(real.shape)
-        print(real)
+        batch_size = 50
+        #print(real.shape)
+        #print(real)
         real = real.float()
         #Train Discriminator : max log(D(real)) + log(1 - D(G(z)))
         noise = torch.randn(batch_size, z_dim).to(device)
-        print(noise)
+        #print(noise)
         fake = net_G(noise)
         disc_real = net_D(real).view(-1)
-        print("disc_real")
-        print(disc_real)
+        #print("disc_real")
+        #print(disc_real)
         lossD_real = criterion(disc_real, torch.ones_like(disc_real))
         disc_fake = net_D(fake).view(-1)
         lossD_fake = criterion(disc_fake, torch.zeros_like(disc_fake))
@@ -108,11 +108,15 @@ for epoch in range(num_epochs):
         lossG.backward()
         opt_gen.step()
 
-        print(
-                f"Epoch [{epoch}/{num_epochs}] \ "
-                f"Loss D: {lossD:.4f}, Loss G:{lossG:.4f}"
-            )
-
-
+        if batch_idx == 0:
+            print(
+                    f"Epoch [{epoch}/{num_epochs}] \ "
+                    f"Loss D: {lossD:.4f}, Loss G:{lossG:.4f}"
+                    )
+fake = fake.cpu().detach().numpy()                
+print(fake)
+print(fake[:,0])
+plt.scatter(fake[:,(0)], fake[:,(1)])
+plt.show()
 
 
